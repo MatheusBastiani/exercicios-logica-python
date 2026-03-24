@@ -16,9 +16,3 @@ usuário, conforme exemplo abaixo:
 
 Obs: Você deve verificar se o usuário não digitou o final menor que o inicial.
 """
-de = int(input("Montar a tabuada de: "))
-comeco = int(input("Começar por: "))
-fim = int(input("Terminar em: "))
-
-for i in range(comeco, fim + 1):
-    print(f"{de} X {i} = {de * i}")

@@ -19,6 +19,3 @@ conforme o exemplo abaixo:
     ...
     50 - R$ 99.50
 """
-print("Lojas Quase Dois - Tabela de preços")
-for i in range(1, 51):
-    print(f"{i:2d} - R$ {1.99*i:5.2f}")

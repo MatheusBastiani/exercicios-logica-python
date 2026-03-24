@@ -25,32 +25,3 @@ Um exemplo de saída do programa deve ser conforme o exemplo abaixo:
     Pior nota: 7.5
     Média: 9,04
 """
-NOTAS = 7
-atletas = []
-while True:
-    nome = input("\nDigite o nome do atleta ou 0 para sair: ")
-    if nome == "0":
-        break
-    atleta = {
-        "nome": nome,
-        "notas": [],
-        "media": 0,
-        "melhor_nota": 0,
-        "pior_nota": 0,
-    }
-    for i in range(NOTAS):
-        atleta.get("notas").append(float(input("Nota: ")))
-    atleta.get("notas").sort()
-    atleta["melhor_nota"] = atleta.get("notas").pop()
-    atleta["pior_nota"] = atleta.get("notas").pop(0)
-    media = sum(atleta.get("notas"))
-    media /= NOTAS - 2
-    atleta["media"] = media
-    atletas.append(atleta)
-
-print("\nResultado final:")
-for atleta in atletas:
-    print(f"Atleta: {atleta.get('nome')}")
-    print(f"Melhor nota: {atleta.get('melhor_nota')}")
-    print(f"Pior nota: {atleta.get('pior_nota')}")
-    print(f"Média: {atleta.get('media'):.2f}")
