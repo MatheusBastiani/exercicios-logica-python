@@ -13,3 +13,15 @@ Gravar na variável excesso a quantidade de quilos além do limite
 e na variável multa o valor da multa que João deverá pagar.
 Imprima os dados do programa com as mensagens adequadas.
 """
+
+peso = float(input('Insira quantos quilos de peixo Joao pescou'))
+
+if peso > 50 : excesso = (peso - 50)
+else : excesso = 0
+
+multa = excesso * 4
+
+print(f'Joao pescou {excesso} quilos a mais do que o permitido')
+print(f'Joao deve pagar {multa} reais de multa')
+
+
