@@ -16,3 +16,22 @@ e os respectivos preços em 3 situações:
         Acrescente 10% de folga e sempre arredonde os valores para cima,
         isto é, considere latas cheias.
 """
+
+import math
+
+metro_2 = float(input('Insira a quantidade de metros quadrados a serem pintados: '))
+
+l_tinta = (metro_2 / 6) * 1.1
+
+
+qtd_lata = math.floor(l_tinta / 18)
+
+qtd_galao = math.ceil((l_tinta % 18) / 3.6)
+
+if qtd_galao >= 5 :
+    qtd_galao -= 5
+    qtd_lata += 1
+
+print(f'Comprando apenas latas de 18 litros voce pagaria R$ {math.ceil(l_tinta / 18) * 80}')
+print(f'Comprando apenas galoes de 3.6 litros voce pagaria R$ {math.ceil(l_tinta / 3.6) * 25}')
+print(f'Comprando latas e galoes voce gastaria R$ {qtd_galao * 25 + qtd_lata * 80} em galoes e latas de tinta ')

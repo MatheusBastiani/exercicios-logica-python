@@ -24,3 +24,26 @@ No exemplo o valor da hora é 5 e a quantidade de hora é 220.
         Total de descontos              : R$  165,00
         Salário Liquido                 : R$  935,00
 """
+
+valor_hora = float(input('Insira o valor da sua hora: '))
+hora_trabalhada = float(input('Insira a quantidade de horas trabalhadas no mes: '))
+
+salario = valor_hora * hora_trabalhada
+
+if salario <= 900: IR = 0
+elif salario > 900 and salario <= 1500 : IR = 0.1
+elif salario > 1500 and salario <= 2500 : IR = 0.15
+else : IR = 0.2
+
+desconto_IR = IR * salario
+desconto_INSS = 0.10 * salario
+desconto_FGTS = 0.11 * salario
+total_desconto = desconto_IR + desconto_INSS + desconto_FGTS
+salario_liquido = salario - total_desconto
+
+print(f'{"Salario Bruto":<30} {salario:>8.2f}')
+print(f'Imposto de Renda: {desconto_IR:8.2f}')
+print(f'INSS: {desconto_INSS:>.2f}')
+print(f'FGTS: {desconto_FGTS:>.2f}')
+print(f'Total de Descontos: {total_desconto:>.2f}')
+print(f'Salario Liquido: {salario_liquido:>.2f}')
