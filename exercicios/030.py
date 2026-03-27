@@ -42,8 +42,8 @@ total_desconto = desconto_IR + desconto_INSS + desconto_FGTS
 salario_liquido = salario - total_desconto
 
 print(f'{"Salario Bruto":<30} {salario:>8.2f}')
-print(f'Imposto de Renda: {desconto_IR:8.2f}')
-print(f'INSS: {desconto_INSS:>.2f}')
-print(f'FGTS: {desconto_FGTS:>.2f}')
-print(f'Total de Descontos: {total_desconto:>.2f}')
-print(f'Salario Liquido: {salario_liquido:>.2f}')
+print(f'{"Imposto de Renda":<30} {desconto_IR:8.2f}')
+print(f'{"INSS:":<30} {desconto_INSS:>.2f}')
+print(f'{"FGTS:":<30} {desconto_FGTS:>.2f}')
+print(f'{"Total de Descontos":<30} {total_desconto:>.2f}')
+print(f'{"Salario Liquido":<30} {salario_liquido:>.2f}')

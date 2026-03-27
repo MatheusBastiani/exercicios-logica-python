@@ -11,3 +11,11 @@ Dicas:
     Triângulo Isósceles: quaisquer dois lados iguais;
     Triângulo Escaleno: três lados diferentes;
 """
+
+l1 = int(input('Insira o tamanho do primeiro lado: '))
+l2 = int(input('Insira o tamanho do segundo lado: '))
+l3 = int(input('Insira o tamanho do terceiro lado: '))
+
+if l1 == l2 == l3: print('Triangulo Equilatero')
+elif l1 != l2 != l3 : print('Trianguilo Escaleno')
+else: print('Triangulo Isosceles')
