@@ -3,3 +3,11 @@ Faça um programa que leia um nome de usuário e a sua senha e não aceite a sen
 igual ao nome do usuário, mostrando uma mensagem de erro e voltando a
 pedir as informações.
 """
+
+usuario = str(input('\nInsira seu nome de usuario: ')).lower()
+
+while 1:
+
+    if str(input('Insira uma senha:')).lower() == usuario:
+        print('\nEscolha uma senha diferente do nome de usuario\n')
+    else: exit()

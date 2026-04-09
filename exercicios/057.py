@@ -9,3 +9,8 @@ A saída deve ser conforme o exemplo abaixo:
     ...
     5 X 10 = 50
 """
+
+numero = int(input('Insira o numero o qual quer descobrir a tabuada: '))
+
+for i in range(1, 11):
+    print(f'{numero} X {i} = {numero * i}')

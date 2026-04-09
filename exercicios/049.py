@@ -7,3 +7,14 @@ Faça um programa que calcule e escreva o número de anos necessários para que 
 população do país A ultrapasse ou iguale a população do país B, mantidas as
 taxas de crescimento.
 """
+
+A = 80000
+B = 200000
+anos = 0
+
+while A <= B:
+    A = A * 1.03
+    B = B * 1.015
+    anos = anos + 1
+
+print(f'Precisa de {anos} anos para a populacao de A ser maior ou igual a B')
